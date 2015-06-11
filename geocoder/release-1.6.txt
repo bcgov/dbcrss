@@ -1,1 +1,3 @@
 Geocoder 1.6 released
+
+Test
