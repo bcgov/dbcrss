@@ -76,9 +76,9 @@ router_url = 'https://router.api.gov.bc.ca/route.json?routeDescription=' \
              '&distanceUnit=km&apikey=' NEED AN API KEY - THROTTLED AND GENERIC
 
 # Location of the text files
-logfile_1 = GitHub repo URL '\geocoder-secure-heartbeat.txt'
-logfile_2 = GitHub repo URL '\geocoder-public-heartbeat.txt'
-logfile_3 = GitHub repo URL '\router-heartbeat.txt'
+logfile_1 = 'https://github.com/bcgov/dbcrss/blob/master/geocoder/heartbeat/geocoder-secure-heartbeat.txt'
+logfile_2 = 'https://github.com/bcgov/dbcrss/blob/master/geocoder/heartbeat/geocoder-public-heartbeat.txt'
+logfile_3 = 'https://github.com/bcgov/dbcrss/blob/master/geocoder/heartbeat/router-heartbeat.txt'
 
 # Counter used to iterate through the 'log_file' list.
 log_count = 0
