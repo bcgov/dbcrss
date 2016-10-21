@@ -58,7 +58,7 @@ geocoder_secure_url = 'https://geocoder.api.gov.bc.ca/addresses.json?' \
                       'Victoria%2C%20BC&locationDescriptor=any&maxResults=1' \
                       '&interpolation=adaptive&echo=true&setBack=0&' \
                       'outputSRS=4326&minScore=1&provinceCode=BC' \
-                      '&apikey=' NEED AN API KEY - THROTTLED AND GENERIC
+                      '&apikey=5430944192d540e0832a2a92b186e9e3'
 
 # Request URL to the public geocoder
 geocoder_public_url = 'https://apps.gov.bc.ca/pub/geocoder/addresses.json?' \
@@ -73,7 +73,7 @@ geocoder_public_url = 'https://apps.gov.bc.ca/pub/geocoder/addresses.json?' \
 router_url = 'https://router.api.gov.bc.ca/route.json?routeDescription=' \
              'spansProvinceFastest&points=-126.844567%2C49.978503%2C-' \
              '122.799997%2C58.925305&outputSRS=4326&criteria=fastest' \
-             '&distanceUnit=km&apikey=' NEED AN API KEY - THROTTLED AND GENERIC
+             '&distanceUnit=km&apikey=5430944192d540e0832a2a92b186e9e3'
 
 # Location of the text files
 logfile_1 = 'https://github.com/bcgov/dbcrss/blob/master/geocoder/heartbeat/geocoder-secure-heartbeat.txt'
