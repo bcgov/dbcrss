@@ -63,7 +63,7 @@
          
          
          //get the data
-         psv("router-heartbeat.txt", function(error, data) {
+         psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/geocoder/heartbeat/router-heartbeat.txt", function(error, data) {
          	data.forEach(function(d) {
          		d.date = parseDate(d.date);
          		d.executionTime = +d.executionTime;
