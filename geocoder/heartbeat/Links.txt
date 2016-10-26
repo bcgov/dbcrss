@@ -1,3 +1,0 @@
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
-http://bcgov.github.io/dbcrss/heartbeat/router/ 
