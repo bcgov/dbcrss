@@ -1,4 +1,4 @@
-# DataBC Heartbeat (Web Service Checker)
+# DataBC Heartbeat (web service checker)
 
 DataBC offers a number of RESTful APIs which are owned and managed by the Province of BC. 
 
