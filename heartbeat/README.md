@@ -4,7 +4,7 @@ DataBC offers a number of RESTful APIs which are owned and managed by the Provin
 
 This repo contains python scripts, resultant files and web pages to verify that DataBC web services are online. A single request is sent to
 each web service using a scheduled job to ensure consistency and comparison over multiple days.
-Specific information for each web service is recorded including a timestamp, execution time and response code.
+Specific information for each web service is recorded including a time stamp, execution time and HTTP response status code.
 
 
 ### License
