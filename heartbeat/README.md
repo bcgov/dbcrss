@@ -16,6 +16,10 @@ http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
 
 
-### License
+### Licenses
 
+Content found at the root of the 'src' folder
 https://github.com/bcgov/dbcrss/blob/master/heartbeat/LICENSE
+
+Content found within the 'src/d3' folder
+https://github.com/bcgov/dbcrss/blob/master/heartbeat/src/d3/LICENSE
