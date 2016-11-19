@@ -11,7 +11,7 @@ Specific information for each web service is recorded including a time stamp, ex
 
 A modern web browser is recommended for viewing GitHub pages which include data visualizations (d3).
 
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
 http://bcgov.github.io/dbcrss/heartbeat/router/
 
