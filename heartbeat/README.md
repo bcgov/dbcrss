@@ -7,6 +7,11 @@ each web service using a scheduled job to ensure consistency and comparison over
 Specific information for each web service is recorded including a time stamp, execution time and HTTP response status code.
 
 
+### Supported web browsers
+
+A modern web browser is recommended for viewing GitHub pages which include data visualizations (d3).
+
+
 ### License
 
 https://github.com/bcgov/dbcrss/blob/master/heartbeat/LICENSE
