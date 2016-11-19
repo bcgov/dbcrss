@@ -9,7 +9,7 @@ Specific information for each web service is recorded including a time stamp, ex
 
 ### Supported web browsers
 
-A modern web browser is recommended for viewing GitHub pages which include data visualizations (d3).
+A modern web browser is recommended for viewing GitHub pages which include data visualizations.
 
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
