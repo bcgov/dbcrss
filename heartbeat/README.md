@@ -21,5 +21,5 @@ http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
 Content found at the root of the 'src' folder:  <br/>
 https://github.com/bcgov/dbcrss/blob/master/heartbeat/LICENSE  <br/>
 
-Content found within the 'src/d3' folder  <br/>
+Content found within the 'src/d3' folder:  <br/>
 https://github.com/bcgov/dbcrss/blob/master/heartbeat/src/d3/LICENSE  <br/>
