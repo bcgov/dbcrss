@@ -47,7 +47,7 @@ web_request = ''
 service_url = []
 log_files = []
 
-dbc_api_key = "PARAMETER"
+dbc_api_key = str(sys.argv[1])
 
 # Define variables
 
