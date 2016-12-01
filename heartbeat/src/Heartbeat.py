@@ -76,9 +76,9 @@ router_url = 'https://router.api.gov.bc.ca/route.json?routeDescription=' \
              '&distanceUnit=km&apikey=' + dbc_api_key
 
 # Location of the text files
-logfile_1 = 'https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-secure-heartbeat.txt'
-logfile_2 = 'https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-public-heartbeat.txt'
-logfile_3 = 'https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/router-heartbeat.txt'
+logfile_1 = 'geocoder-secure-heartbeat.txt'
+logfile_2 = 'geocoder-public-heartbeat.txt'
+logfile_3 = 'router-heartbeat.txt'
 
 # Counter used to iterate through the 'log_file' list.
 log_count = 0
