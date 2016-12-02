@@ -40,7 +40,7 @@ var yAxis = d3.svg.axis().scale(y)
 
 
 //get the data
-psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-public-heartbeat.txt", function(error, data) {
+psv("geocoder-public-heartbeat.txt", function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.executionTime = +d.executionTime;
