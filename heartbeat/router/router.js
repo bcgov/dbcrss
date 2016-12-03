@@ -40,7 +40,7 @@ var yAxis = d3.svg.axis().scale(y)
 
 
 //get the data
-psv("router-heartbeat.txt", function(error, data) {
+psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/router-heartbeat.txt", function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.executionTime = +d.executionTime;
