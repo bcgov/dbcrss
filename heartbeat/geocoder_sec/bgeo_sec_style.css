@@ -4,16 +4,16 @@ body {
 }
 .line {
 	fill: none;
-	stroke: #700;
-	stroke-width: 1.0px;
+	stroke: #003466;
+	stroke-width: 3.0px;
 }
 .axis path {
 	display: none;
 }
 .axis line {
 	shape-rendering: crispEdges;
-	stroke: #100;
+	stroke: lightgrey;
 }
 .area {
-	fill: steelblue;
+	fill: none;
 }
