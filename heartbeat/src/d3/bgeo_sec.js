@@ -32,10 +32,10 @@ var line = d3.svg.line()
     });
 
 var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(15);
+    .orient("bottom").ticks(10);
 
 var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(10)
+    .orient("left").ticks(5)
     .innerTickSize(-width);
 
 
