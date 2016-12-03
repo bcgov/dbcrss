@@ -7,12 +7,15 @@ each web service using a scheduled job to ensure consistency and allow for compa
 Specific information for each web service is recorded including a time stamp, execution time and HTTP response status code.
 
 
-### Supported web browsers
-
-A modern web browser is recommended for viewing GitHub pages which include data visualizations.
+### Visualizations
 
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
+
+
+### Supported web browsers
+
+A modern web browser is recommended for viewing GitHub pages which include data visualizations.
 
 
 ### Licenses
