@@ -1,0 +1,19 @@
+body {
+	font: 14px sans-serif;
+	margin: 2;
+}
+.line {
+	fill: none;
+	stroke: #003466;
+	stroke-width: 3.0px;
+}
+.axis path {
+	display: none;
+}
+.axis line {
+	shape-rendering: crispEdges;
+	stroke: lightgrey;
+}
+.area {
+	fill: none;
+}
