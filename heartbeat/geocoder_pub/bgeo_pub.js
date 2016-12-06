@@ -35,7 +35,7 @@ var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(24);
 
 var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(6)
+    .orient("left").ticks(5)
     .innerTickSize(-width);
 
 
