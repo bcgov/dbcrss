@@ -123,7 +123,7 @@ psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/router-
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("x", 0 - (height / 2))
-        .attr("y", -60)
+        .attr("y", -57)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Milliseconds");
