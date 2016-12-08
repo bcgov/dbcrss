@@ -15,4 +15,4 @@ install:
   - pip install .
   - pip install -r requirements.txt
 # command to run tests
-script: heartbeat/src/Heartbeat.py 5430944192d540e0832a2a92b186e9e3
+script: heartbeat/src/Heartbeat.py $dk
