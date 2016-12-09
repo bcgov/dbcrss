@@ -107,4 +107,18 @@ for _URL_ in service_url:
     target_gated_log.write(str(response_code))
     target_gated_log.write('\n')
     target_gated_log.close()
+    #
+    #*******************************************************************************
+    #Only retain 7 days of data (15 minute intervals)
+    one_week_lines = 672
+    num_lines_total = int((sum(1 for line in open(log_files[log_count]))) - 1)
+    num_lines_to_remove = (num_lines_total - one_week_lines) + 1
+    #
+    if num_lines_to_remove >= 1:
+        lines = open(log_files[log_count]).readlines()
+        target_gated_log = open(log_files[log_count], 'w')
+        target_gated_log.write("chart|date|executionTime|responseCode\n")
+        target_gated_log.writelines(lines[num_lines_to_remove:])
+        target_gated_log.close()
+    #
     log_count += 1
