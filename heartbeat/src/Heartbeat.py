@@ -101,12 +101,12 @@ for _URL_ in service_url:
     # Grab the executionTime parameter
     exec_time = data['executionTime']
     # Write the results to log file
-    target_gated_log = open(log_files[log_count], 'a')
-    target_gated_log.write(str(timestamp))
-    target_gated_log.write(str(exec_time) + '|')
-    target_gated_log.write(str(response_code))
-    target_gated_log.write('\n')
-    target_gated_log.close()
+    target_log = open(log_files[log_count], 'a')
+    target_log.write(str(timestamp))
+    target_log.write(str(exec_time) + '|')
+    target_log.write(str(response_code))
+    target_log.write('\n')
+    target_log.close()
     #
     #*******************************************************************************
     #Only retain 7 days of data (15 minute intervals)
@@ -116,9 +116,9 @@ for _URL_ in service_url:
     #
     if num_lines_to_remove >= 1:
         lines = open(log_files[log_count]).readlines()
-        target_gated_log = open(log_files[log_count], 'w')
-        target_gated_log.write("chart|date|executionTime|responseCode\n")
-        target_gated_log.writelines(lines[num_lines_to_remove:])
-        target_gated_log.close()
+        target_log = open(log_files[log_count], 'w')
+        target_log.write("chart|date|executionTime|responseCode\n")
+        target_log.writelines(lines[num_lines_to_remove:])
+        target_log.close()
     #
     log_count += 1
