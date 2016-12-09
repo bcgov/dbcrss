@@ -100,15 +100,7 @@ for _URL_ in service_url:
     data = json.loads(json_response)
     # Grab the executionTime parameter
     exec_time = data['executionTime']
-    # Write the results to log file
-    target_log = open(log_files[log_count], 'a')
-    target_log.write(str(timestamp))
-    target_log.write(str(exec_time) + '|')
-    target_log.write(str(response_code))
-    target_log.write('\n')
-    target_log.close()
     #
-    #*******************************************************************************
     #Only retain 7 days of data (15 minute intervals)
     one_week_lines = 672
     num_lines_total = int((sum(1 for line in open(log_files[log_count]))) - 1)
@@ -119,6 +111,17 @@ for _URL_ in service_url:
         target_log = open(log_files[log_count], 'w')
         target_log.write("chart|date|executionTime|responseCode\n")
         target_log.writelines(lines[num_lines_to_remove:])
+        target_log.write(str(timestamp))
+        target_log.write(str(exec_time) + '|')
+        target_log.write(str(response_code))
+        target_log.write('\n')
         target_log.close()
+    else:
+        target_log = open(log_files[log_count], 'a')
+        target_log.write(str(timestamp))
+        target_log.write(str(exec_time) + '|')
+        target_log.write(str(response_code))
+        target_log.write('\n')
+        target_log.close() 
     #
     log_count += 1
