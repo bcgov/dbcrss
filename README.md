@@ -2,9 +2,9 @@
 # dbcrss
 DataBC Application Feeds Service
 ## How to Access
-https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
-https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
-https://bcgov.github.io/dbcrss/heartbeat/router/
+* https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
+* https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
+* https://bcgov.github.io/dbcrss/heartbeat/router/
 
 ## Update Interval
 every 15 minutes
