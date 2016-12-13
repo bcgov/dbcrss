@@ -101,8 +101,8 @@ for _URL_ in service_url:
     # Grab the executionTime parameter
     exec_time = data['executionTime']
     #
-    #Only retain 7 days of data (15 minute intervals)
-    one_week_lines = 672
+    #Only retain 7 days of data (10 minute intervals)
+    one_week_lines = 1008
     num_lines_total = int((sum(1 for line in open(log_files[log_count]))) - 1)
     num_lines_to_remove = (num_lines_total - one_week_lines) + 1
     #
