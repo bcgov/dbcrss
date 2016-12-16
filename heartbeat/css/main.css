@@ -4,8 +4,18 @@ body {
 }
 .line {
 	fill: none;
-	stroke: #003466;
+	stroke: blue;
 	stroke-width: 3.0px;
+}
+.line2 {
+	fill: none;
+	stroke: #FF0000;
+	stroke-width: 3.0px;
+}
+.line3 {
+	fill: none;
+	stroke: #8B008B;
+	stroke-width: 5.0px;
 }
 .axis path {
 	display: none;
