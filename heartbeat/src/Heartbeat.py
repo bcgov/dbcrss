@@ -109,7 +109,7 @@ for _URL_ in service_url:
     if num_lines_to_remove >= 1:
         lines = open(log_files[log_count]).readlines()
         target_log = open(log_files[log_count], 'w')
-        target_log.write("chart|date|executionTime|responseCode\n")
+        target_log.write("chart|date|executionTime|upstreamLatency|proxyLatency|responseCode\n")
         target_log.writelines(lines[num_lines_to_remove:])
         target_log.write(str(timestamp))
         target_log.write(str(exec_time) + '|')
