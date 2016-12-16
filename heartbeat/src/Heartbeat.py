@@ -94,6 +94,9 @@ for _URL_ in service_url:
     timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
     # Get the HTTP response code
     response_code = urllib2.urlopen(_URL_).getcode()
+    #Get latency values from header
+    upstreamLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Upstream-Latency')
+    proxyLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Proxy-Latency')
     # Get the JSON response and parse out the execution time (executionTime)
     web_request = urllib2.urlopen(_URL_)
     json_response = web_request.read()
