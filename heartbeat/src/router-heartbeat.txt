@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
-2016/12/08|05:52:02|593|200
 2016/12/08|05:57:02|647|200
 2016/12/08|06:02:03|595|200
 2016/12/08|06:07:02|600|200
@@ -1008,3 +1007,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
 2016/12/16|13:30:05|594|689|0|200
 2016/12/16|13:40:03|595|701|0|200
 2016/12/16|13:50:03|599|696|0|200
+2016/12/16|14:00:03|638|690|0|200
