@@ -41,28 +41,28 @@ import json
 #--------------------------------------------------------------------------------
 # Variables
 #--------------------------------------------------------------------------------
-# Request URL for the gated Geocoder
-geocoder_secure_url = ''
 # Request URL for the public Geocoder
 geocoder_public_url = ''
-# Request URL for the BC Route Planner
-router_url = ''
+# Request URL for the gated Geocoder
+geocoder_secure_url = ''
+# JSON response from web service request
+json_response = ''
+# Counter used to iterate through the 'log_file' list.
+log_count = 0
 # Log file containing response and header details for the gated Geocoder
 logfile_1 = ''
 # Log file containing response and header details for the public Geocoder
 logfile_2 = ''
 # Log file containing response and header details for the BC Route Planner
 logfile_3 = ''
-# web request submitted to web services
-web_request = ''
-# JSON response from web service request
-json_response = ''
-# List of URLs (requests)
-service_url = []
 # List of text file locations to store output
 log_files = []
-# Counter used to iterate through the 'log_file' list.
-log_count = 0
+# Request URL for the BC Route Planner
+router_url = ''
+# List of URLs (requests)
+service_url = []
+# web request submitted to web services
+web_request = ''
 # Accept the API Key for the gated Geocoder and BC Route Planner as an argument
 dbc_api_key = str(sys.argv[1])
 #--------------------------------------------------------------------------------
