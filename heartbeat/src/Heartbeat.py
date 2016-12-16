@@ -4,11 +4,11 @@
 
  This python script is used to submit a single request to a web service
  or collection of web services. This script will capture and parse the
- web service response and write an entry to a text file. Intended to be
+ web service response (and header) and write an entry to a text file. Intended to be
  included in a scheduled job with a regular interval to monitor a
  web service.
 
- Specifically, the script will log the date and time, executionTime
+ The script will log the date, time, executionTime, latency
  and response code for the BC Physical Address Geocoder and the
  BC Route Planner.
 
@@ -21,7 +21,7 @@
  BC Route Planner:
  https://catalogue.data.gov.bc.ca/dataset/3dad0c30-ef32-4f4c-82fa-33787d5f85f8
 
- Two of the APIs below require the use of API keys. To acquire an API
+ Two of these APIs require the use of API keys. To acquire an API
  key for your application please contact DataBC.
 
 
@@ -36,12 +36,18 @@ import time
 import urllib2
 import json
 
-# Clear variables
+# Variables
+# Log file containing response and header details for the gated Geocoder
 logfile_1 = ''
+# Log file containing response and header details for the public Geocoder
 logfile_2 = ''
+# Log file containing response and header details for the BC Route Planner
 logfile_3 = ''
+# Request URL for the gated Geocoder
 geocoder_secure_url = ''
+# Request URL for the public Geocoder
 geocoder_public_url = ''
+# Request URL for the BC Route Planner
 router_url = ''
 json_response = ''
 web_request = ''
