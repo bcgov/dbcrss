@@ -40,7 +40,7 @@ var line2 = d3.svg.line()
     .y(function(d) {
         return y2(d.upstreamLatency);
     });
-	
+
 var line3 = d3.svg.line()
     .x(function(d) {
         return x(d.date);
@@ -61,30 +61,32 @@ var yAxis = d3.svg.axis().scale(y)
 // add a Y axis line on the right of the chart with tick marks
 var yAxisRight = d3.svg.axis().scale(y2)
     .orient("right").ticks(10);
-    //.innerTickSize(-width);
+//.innerTickSize(-width);
 
 //get the data
 psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-public-heartbeat.txt", function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.date);
         d.executionTime = +d.executionTime;
-		d.upstreamLatency = +d.upstreamLatency;
+        d.upstreamLatency = +d.upstreamLatency;
     });
-	
+
     // Scale the range of the data on the X axis
     x.domain(d3.extent(data, function(d) {
         return d.date;
     }));
-	
-	// Scale the range of the data on the Y axis (left)
+
+    // Scale the range of the data on the Y axis (left)
     //y.domain([0, 100]);
-	y.domain([0, d3.max(data, function(d) { 
-		return Math.max(d.executionTime); })]);	
-	
-	// Scale the range of the data on the Y axis (right)
-	y2.domain([0, d3.max(data, function(d) { 
-		return Math.max(d.upstreamLatency); })]);
-	
+    y.domain([0, d3.max(data, function(d) {
+        return Math.max(d.executionTime);
+    })]);
+
+    // Scale the range of the data on the Y axis (right)
+    y2.domain([0, d3.max(data, function(d) {
+        return Math.max(d.upstreamLatency);
+    })]);
+
     // Nest data by chart.
     var charts = d3.nest()
         .key(function(d) {
@@ -134,15 +136,15 @@ psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocode
             return line(d.values);
         });
 
-	// Add the second line path elements.
+    // Add the second line path elements.
     svg.append("path")
         .attr("class", "line2")
         .attr("d", function(d) {
             y.domain([0, d.maxexecutionTime]);
             return line2(d.values);
         });
-	
-	svg.append("path")
+
+    svg.append("path")
         .attr("class", "line3")
         .attr("d", function(d) {
             y.domain([0, d.maxexecutionTime]);
@@ -158,24 +160,24 @@ psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocode
     // Add the Y Axis
     svg.append("g")
         .attr("class", "y axis")
-		.style("fill", "blue")
+        .style("fill", "blue")
         .call(yAxis);
-		
-	svg.append("g")
+
+    svg.append("g")
         .attr("class", "y axis")
-		.attr("transform", "translate(" + (width-10) + " ,0)")	
-		.style("fill", "red")	
+        .attr("transform", "translate(" + (width - 10) + " ,0)")
+        .style("fill", "red")
         .call(yAxisRight);
 
     // Add the text label for the x axis
     svg.append("text")
-        .attr("transform", "translate(" + (width /2) + " ," + (height + margin.bottom) + ")")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
         .attr("x", -45)
         .style("text-anchor", "middle")
         .text(function(d) {
             return d.key;
         });
-		
+
     //Label the Y axis (left side)
     svg.append("text")
         .attr("transform", "rotate(-90)")
@@ -192,6 +194,6 @@ psv("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocode
         .attr("y", +1120)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-        .text("Milliseconds");		
+        .text("Milliseconds");
 
 });
