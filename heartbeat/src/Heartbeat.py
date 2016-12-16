@@ -1,6 +1,6 @@
 '''
  Description
- -----------
+--------------------------------------------------------------------------------
 
  This python script is used to submit a single request to a web service
  or collection of web services. This script will capture and parse the
@@ -28,6 +28,7 @@
  Contact Us
  -----------
  https://forms.gov.bc.ca/databc-contact-us/
+ --------------------------------------------------------------------------------
 '''
 
 # Import modules
@@ -57,8 +58,7 @@ service_url = []
 log_files = []
 # Accept the API Key for the gated Geocoder and BC Route Planner as an argument
 dbc_api_key = str(sys.argv[1])
-
-# Define variables
+#--------------------------------------------------------------------------------
 
 # Request URL to the gated geocoder
 # Please contact DataBC to acquire an API key for your application
