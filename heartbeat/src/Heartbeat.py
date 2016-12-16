@@ -41,7 +41,7 @@ import urllib2
 import json
 
 #--------------------------------------------------------------------------------
-# Variables
+# Variable Descriptions
 #--------------------------------------------------------------------------------
 # Request URL for the public Geocoder
 geocoder_public_url = ''
@@ -59,6 +59,12 @@ logfile_2 = ''
 logfile_3 = ''
 # List of text file locations to store output
 log_files = []
+# The total number of lines found in the textfile
+num_lines_total = 0
+# The number of lines beyond 7 days of data that need to be removed from the text file
+num_lines_to_remove = 0
+# The HTTP response code
+response_code = 0
 # Request URL for the BC Route Planner
 router_url = ''
 # List of URLs (requests)
