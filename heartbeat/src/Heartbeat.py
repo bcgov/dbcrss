@@ -43,6 +43,8 @@ import json
 #--------------------------------------------------------------------------------
 # Variable Descriptions
 #--------------------------------------------------------------------------------
+# Accept the API Key for the gated Geocoder and BC Route Planner as an argument
+dbc_api_key = str(sys.argv[1])
 # Request URL for the public Geocoder
 geocoder_public_url = ''
 # Request URL for the gated Geocoder
@@ -63,16 +65,19 @@ log_files = []
 num_lines_total = 0
 # The number of lines beyond 7 days of data that need to be removed from the text file
 num_lines_to_remove = 0
+# The proxy latency as provided in response header
+proxyLatency = 0
 # The HTTP response status code
 response_code = 0
 # Request URL for the BC Route Planner
 router_url = ''
 # List of URLs (requests)
 service_url = []
+# The upstream latency provided in response header
+upstreamLatency = 0
 # web request submitted to web services
 web_request = ''
-# Accept the API Key for the gated Geocoder and BC Route Planner as an argument
-dbc_api_key = str(sys.argv[1])
+
 #--------------------------------------------------------------------------------
 
 # Request URL to the gated geocoder
