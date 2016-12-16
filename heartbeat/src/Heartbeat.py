@@ -1,4 +1,5 @@
 '''
+--------------------------------------------------------------------------------
  Description
 --------------------------------------------------------------------------------
 
@@ -37,6 +38,7 @@ import time
 import urllib2
 import json
 
+#--------------------------------------------------------------------------------
 # Variables
 #--------------------------------------------------------------------------------
 # Request URL for the gated Geocoder
@@ -51,11 +53,16 @@ logfile_1 = ''
 logfile_2 = ''
 # Log file containing response and header details for the BC Route Planner
 logfile_3 = ''
+# web request submitted to web services
+web_request = ''
 # JSON response from web service request
 json_response = ''
-web_request = ''
+# List of URLs (requests)
 service_url = []
+# List of text file locations to store output
 log_files = []
+# Counter used to iterate through the 'log_file' list.
+log_count = 0
 # Accept the API Key for the gated Geocoder and BC Route Planner as an argument
 dbc_api_key = str(sys.argv[1])
 #--------------------------------------------------------------------------------
@@ -88,9 +95,6 @@ router_url = 'https://router.api.gov.bc.ca/route.json?routeDescription=' \
 logfile_1 = 'geocoder-secure-heartbeat.txt'
 logfile_2 = 'geocoder-public-heartbeat.txt'
 logfile_3 = 'router-heartbeat.txt'
-
-# Counter used to iterate through the 'log_file' list.
-log_count = 0
 
 # Lists to iterate through the variables above
 service_url = [geocoder_secure_url, geocoder_public_url, router_url]
