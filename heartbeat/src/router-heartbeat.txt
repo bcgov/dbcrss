@@ -1,4 +1,4 @@
-chart|date|executionTime|responseCode
+chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
 2016/12/08|03:17:02|602|200
 2016/12/08|03:22:02|594|200
 2016/12/08|03:27:02|627|200
