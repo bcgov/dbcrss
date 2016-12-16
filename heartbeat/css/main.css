@@ -15,7 +15,7 @@ body {
 .line3 {
 	fill: none;
 	stroke: #8B008B;
-	stroke-width: 5.0px;
+	stroke-width: 50.0px;
 }
 .axis path {
 	display: none;
