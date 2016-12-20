@@ -1,7 +1,8 @@
-Plotly.d3.csv('https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/test2.csv', function(err, rows){
+Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/3d-line1.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) 
           { return row[key]; }); }
+          
 var x = unpack(rows , 'x');
 var y = unpack(rows , 'y');
 var z = unpack(rows , 'z'); 
