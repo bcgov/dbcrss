@@ -3,9 +3,9 @@ Plotly.d3.csv('https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/s
           return rows.map(function(row) 
           { return row[key]; }); }
           
-var x = unpack(rows , 'x');
-var y = unpack(rows , 'y');
-var z = unpack(rows , 'z'); 
+var x = unpack(rows , 'chart');
+var y = unpack(rows , 'date');
+var z = unpack(rows , 'y'); 
 var c = unpack(rows , 'color');
 Plotly.plot('graph', [{
   type: 'scatter3d',
