@@ -5,7 +5,7 @@ Plotly.d3.csv('https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/s
           
 var x = unpack(rows , 'chart');
 var y = unpack(rows , 'date');
-var z = unpack(rows , 'y'); 
+var z = unpack(rows , 'color'); 
 var c = unpack(rows , 'color');
 Plotly.plot('graph', [{
   type: 'scatter3d',
