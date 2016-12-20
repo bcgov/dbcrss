@@ -1,6 +1,4 @@
-var psv = d3.dsv("|", "text/plain");
-
-Plotly.d3.psv('https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/test.txt', function(err, rows){
+Plotly.d3.csv('https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/test2.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) 
           { return row[key]; }); }
