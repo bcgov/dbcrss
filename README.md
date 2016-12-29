@@ -3,6 +3,7 @@
 DataBC Application Feeds Service
 ## How to Access
 * https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
+* http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/
 * https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
 * https://bcgov.github.io/dbcrss/heartbeat/router/
 
