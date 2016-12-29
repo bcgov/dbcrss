@@ -10,6 +10,7 @@ Specific information for each web service is recorded including a time stamp, ex
 ### Visualizations
 
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_multi/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
 
