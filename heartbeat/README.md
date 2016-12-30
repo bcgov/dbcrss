@@ -14,6 +14,7 @@ http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
+http://bcgov.github.io/dbcrss/heartbeat/router_latency/  <br/>
 
 
 ### Supported web browsers
