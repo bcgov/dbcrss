@@ -5,7 +5,9 @@ DataBC Application Feeds Service
 * https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
 * https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/
 * https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
+* https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/
 * https://bcgov.github.io/dbcrss/heartbeat/router/
+* https://bcgov.github.io/dbcrss/heartbeat/router_latency/
 
 ## Update Interval
 every 15 minutes
