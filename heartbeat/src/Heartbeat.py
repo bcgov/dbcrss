@@ -115,20 +115,26 @@ log_files = [logfile_1, logfile_2, logfile_3]
 
 # Loop through and write results to the respective log files
 for _URL_ in service_url:
-    # Get the date and time
-    timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
-    # Get the HTTP response code
-    response_code = urllib2.urlopen(_URL_).getcode()
-    #Get latency values from header
-    upstreamLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Upstream-Latency')
-    proxyLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Proxy-Latency')
-    # Get the JSON response and parse out the execution time (executionTime)
-    web_request = urllib2.urlopen(_URL_)
-    json_response = web_request.read()
-    # Load the JSON response for parsing
-    data = json.loads(json_response)
-    # Grab the executionTime parameter
-    exec_time = data['executionTime']
+    try:
+        # Get the date and time
+        timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
+        # Get the HTTP response code
+        response_code = urllib2.urlopen(_URL_).getcode()
+        #Get latency values from header
+        upstreamLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Upstream-Latency')
+        proxyLatency = urllib2.urlopen(_URL_).info().getheader('X-Kong-Proxy-Latency')
+        # Get the JSON response and parse out the execution time (executionTime)
+        web_request = urllib2.urlopen(_URL_)
+        json_response = web_request.read()
+        # Load the JSON response for parsing
+        data = json.loads(json_response)
+        # Grab the executionTime parameter
+        exec_time = data['executionTime']
+    except:
+        response_code = 0
+        upstreamLatency = 0
+        proxyLatency = 0
+        exec_time = 0
     #
     #Only retain 7 days of data (10 minute intervals)
     one_week_lines = 1008
