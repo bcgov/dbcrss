@@ -1,12 +1,12 @@
-# DataBC Heartbeat
+# DataBC Web Services Heartbeat Monitoring Utilities
 
 DataBC offers a number of RESTful APIs which are owned and managed by the Province of BC. 
 
-This repo contains scripts, resultant files and web pages to verify that web services hosted by DataBC are online. A single request is sent to
-each web service using a scheduled job to ensure consistency and allow for comparison over multiple days.
-Specific information for each web service is recorded including a time stamp, execution time, network latency, proxy latency and HTTP response status code.
+This repo contains scripts, resultant files and web pages that can be used to help verify the operating status of specific web service APIs provided by DataBC. 
 
-* In the resultant text files showing entries every 10 minutes a value of zero means no response.
+A single request is sent to each web service using a scheduled job to ensure consistency and allow for comparison over multiple days. Specific information for each web service is recorded including a time stamp, execution time, network latency, proxy latency and HTTP response status code.
+
+* The resultant text files show entries on 10 minute intervals; a value of zero means no response from the API
 
 
 ### Visualizations
