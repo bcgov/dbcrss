@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>router-heartbeat</title>
+      <title>router-latency-heartbeat</title>
       <meta charset="UTF-8">
-      <meta name="description" content="Router Heartbeat">
+      <meta name="description" content="router latency heartbeat">
       <meta name="keywords" content="HTML,CSS,JavaScript,D3">
-      <link rel="stylesheet" type="text/css" href="../css/main.css">
-      <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
-      <script type="text/javascript" src="router_multi.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script type="text/javascript" src="lib/d3/3.5.17/d3.min.js"></script>
+      <script type="text/javascript" src="js/latency-charts.js"></script>
    </head>
    <body>
+      <script type="text/javascript">
+        makeCharts("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/router-heartbeat.txt");
+      </script>
       <h2 style="font-size:26px;" align="center">
          BC Route Planner Heartbeat
       </h2>
       <h3 align="center">
-         <font color="blue">Route Planner execution time</font> | <font color="red">Network Latency</font> | <font color="purple">Gateway Latency</font>
+         <font color="blue">Geocoder execution time</font> | <font color="red">Network Latency</font> | <font color="purple">Gateway Latency</font>
       </h3>
       <h4 style="font-size:14px;" align="center">
         <font color="blue"> (<b>Left axis:</b> execution time</font>  |  <font color="red"><b>Right axis:</b> latency)</font>

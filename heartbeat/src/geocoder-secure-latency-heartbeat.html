@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>geocoder-secure-heartbeat</title>
+      <title>geocoder-secure-latency-heartbeat</title>
       <meta charset="UTF-8">
-      <meta name="description" content="Geocoder Public Heartbeat">
+      <meta name="description" content="geocoder secure latency heartbeat">
       <meta name="keywords" content="HTML,CSS,JavaScript,D3">
-      <link rel="stylesheet" type="text/css" href="../css/main.css">
-      <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
-      <script type="text/javascript" src="bgeo_sec_multi.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script type="text/javascript" src="lib/d3/3.5.17/d3.min.js"></script>
+      <script type="text/javascript" src="js/latency-charts.js"></script>
    </head>
    <body>
+      <script type="text/javascript">
+        makeCharts("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-secure-heartbeat.txt");
+      </script>
       <h2 style="font-size:26px;" align="center">
-         BC Physical Address Geocoder (Gated) Heartbeat
+         BC Physical Address Geocoder (Secure) Heartbeat
       </h2>
       <h3 align="center">
          <font color="blue">Geocoder execution time</font> | <font color="red">Network Latency</font> | <font color="purple">Gateway Latency</font>
