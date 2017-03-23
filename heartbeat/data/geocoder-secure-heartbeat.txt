@@ -6,3 +6,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
 2017/03/22|18:00:04|0.615|7|0|200
 2017/03/22|18:10:03|0.660|6|0|200
 2017/03/22|18:20:03|0|0|0|0
+2017/03/22|18:30:03|0|0|0|0
