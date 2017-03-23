@@ -1,0 +1,4 @@
+chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
+2017/03/22|17:42:05|0.542|12|0|200
+2017/03/22|17:43:39|0.541|12|0|200
+2017/03/22|17:44:54|0.531|4|0|200
