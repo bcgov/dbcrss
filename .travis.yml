@@ -2,4 +2,5 @@ language: python
 python:
   - "2.7"
 # command to run tests
-script: python heartbeat/src/Heartbeat.py $dk
+install: "pip install argparse"
+script: python heartbeat/src/Heartbeat.py -url="https://geocoder.api.gov.bc.ca/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=$dk -o geocoder-secure-heartbeat.txt
