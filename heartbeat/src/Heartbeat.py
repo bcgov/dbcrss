@@ -42,6 +42,9 @@
 
  python heartbeat.py -url "https://router.api.gov.bc.ca/route.json?routeDescription=spansProvinceFastest&points=-126.844567%2C49.978503%2C-122.799997%2C58.925305&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=<KEY_HERE>" -o router-heartbeat.txt
 
+ python heartbeat.py -url "http://apps.gov.bc.ca/pub/bcgnws/names/search?name=victoria&outputFormat=json" -o bcgnws-heartbeat.txt
+
+ python heartbeat.py -url "https://apps.gov.bc.ca/pub/geomark/geomarks/gm-7A4A2A93A090493186442C1A48B179C4/point.json?srid=4326" -o geomark-heartbeat.txt
 
  Contact Us
  -----------
@@ -77,26 +80,40 @@ except argparse.ArgumentError as e:
   argParser.print_help()
   sys.exit(1)
 
+response_code = ""
+upstreamLatency = ""
+proxyLatency = ""
+exec_time = ""
+
+
+# Get the date and time
+timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
+
 try:
-  # Get the date and time
-  timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
+  #Run an HTTP GET on the url
+  response = urllib2.urlopen(args.url)
   # Get the HTTP response code
-  response_code = urllib2.urlopen(args.url).getcode()
+  response_code = response.getcode()
   #Get latency values from header
-  upstreamLatency = urllib2.urlopen(args.url).info().getheader('X-Kong-Upstream-Latency')
-  proxyLatency = urllib2.urlopen(args.url).info().getheader('X-Kong-Proxy-Latency')
-  # Get the JSON response and parse out the execution time (executionTime)
-  web_request = urllib2.urlopen(args.url)
-  json_response = web_request.read()
-  # Load the JSON response for parsing
-  data = json.loads(json_response)
-  # Grab the executionTime parameter
-  exec_time = data['executionTime']
-except:
-  response_code = 0
-  upstreamLatency = 0
-  proxyLatency = 0
-  exec_time = 0
+  if response.info().getheader('X-Kong-Upstream-Latency'):
+    upstreamLatency = response.info().getheader('X-Kong-Upstream-Latency')
+  if response.info().getheader('X-Kong-Proxy-Latency'):
+    proxyLatency = response.info().getheader('X-Kong-Proxy-Latency')
+  # Get the response body
+  response_body = response.read()
+except urllib2.URLError as e:
+  if hasattr(e, "code"):
+    response_code = e.code
+
+try:
+  # Assume the response object is JSON, and try to parse it.
+  data = json.loads(response_body)
+  # If the response body was JSON, and it it contains an executionTime property
+  # then fetch that value
+  if 'executionTime' in data:
+    exec_time = data['executionTime']
+except Exception as e:
+  pass #fail silently
 
 #
 #Only retain 7 days of data (10 minute intervals)
