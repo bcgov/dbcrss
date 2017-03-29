@@ -64,7 +64,7 @@ import argparse
 #------------------------------------------------------------------------------
 
 def getHeader():
-  return "chart|date|executionTime|upstreamLatency|proxyLatency|responseCode\n"
+  return "chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime\n"
 
 #------------------------------------------------------------------------------
 # Main
@@ -84,14 +84,17 @@ response_code = ""
 upstreamLatency = ""
 proxyLatency = ""
 exec_time = ""
-
+response_time = ""
 
 # Get the date and time
 timestamp = time.strftime('%Y/%m/%d|%H:%M:%S|')
 
 try:
   #Run an HTTP GET on the url
+  start_time = time.time();
   response = urllib2.urlopen(args.url)
+  end_time = time.time();
+  response_time = (end_time - start_time) * 1000
   # Get the HTTP response code
   response_code = response.getcode()
   #Get latency values from header
@@ -138,7 +141,8 @@ if num_lines_to_remove >= 1:
   outFile.write(str(exec_time) + '|')
   outFile.write(str(upstreamLatency) + '|')
   outFile.write(str(proxyLatency) + '|')
-  outFile.write(str(response_code))
+  outFile.write(str(response_code) + '|')
+  outFile.write(str(response_time))
   outFile.write('\n')
   outFile.close()
 else:
@@ -147,7 +151,8 @@ else:
   outFile.write(str(exec_time) + '|')
   outFile.write(str(upstreamLatency) + '|')
   outFile.write(str(proxyLatency) + '|')
-  outFile.write(str(response_code))
+  outFile.write(str(response_code) + '|')
+  outFile.write(str(response_time))
   outFile.write('\n')
   outFile.close() 
 
