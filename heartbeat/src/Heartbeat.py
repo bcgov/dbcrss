@@ -36,15 +36,15 @@
  Usage Examples:
  --------
 
- python heartbeat.py -url "https://geocoder.api.gov.bc.ca/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=<KEY_HERE>" -o geocoder-secure-heartbeat.txt
+ python heartbeat.py -url "https://geocoder.api.gov.bc.ca/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=<KEY_HERE>" -o ../data/geocoder-secure-heartbeat.txt
 
- python heartbeat.py -url "https://apps.gov.bc.ca/pub/geocoder/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=nokeyprovided" -o geocoder-public-heartbeat.txt
+ python heartbeat.py -url "https://apps.gov.bc.ca/pub/geocoder/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=nokeyprovided" -o ../data/geocoder-public-heartbeat.txt
 
- python heartbeat.py -url "https://router.api.gov.bc.ca/route.json?routeDescription=spansProvinceFastest&points=-126.844567%2C49.978503%2C-122.799997%2C58.925305&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=<KEY_HERE>" -o router-heartbeat.txt
+ python heartbeat.py -url "https://router.api.gov.bc.ca/route.json?routeDescription=spansProvinceFastest&points=-126.844567%2C49.978503%2C-122.799997%2C58.925305&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=<KEY_HERE>" -o ../data/router-heartbeat.txt
 
- python heartbeat.py -url "http://apps.gov.bc.ca/pub/bcgnws/names/search?name=victoria&outputFormat=json" -o bcgnws-heartbeat.txt
+ python heartbeat.py -url "http://apps.gov.bc.ca/pub/bcgnws/names/search?name=victoria&outputFormat=json" -o ../data/bcgnws-heartbeat.txt
 
- python heartbeat.py -url "https://apps.gov.bc.ca/pub/geomark/geomarks/gm-7A4A2A93A090493186442C1A48B179C4/point.json?srid=4326" -o geomark-heartbeat.txt
+ python heartbeat.py -url "https://apps.gov.bc.ca/pub/geomark/geomarks/gm-7A4A2A93A090493186442C1A48B179C4/point.json?srid=4326" -o ../data/geomark-heartbeat.txt
 
  Contact Us
  -----------
