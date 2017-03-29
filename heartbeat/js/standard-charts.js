@@ -1,9 +1,13 @@
 /*
- @param: dataUrl is a URL to a pipe-separated-value file of the form:
-   chart|date|executionTime|upstreamLatency|proxyLatency|responseCode
+ @param: dataUrl is a URL to a pipe-separated-value file of the form
+ @param propertyToPlot is the name of the property in the PSV file to draw on the y-axis
+   chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
  For example: https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/src/geocoder-public-heartbeat.txt
 */
-makeCharts = function(dataUrl) {
+makeCharts = function(dataUrl, propertyToPlot) {
+
+  if (!propertyToPlot)
+    propertyToPlot = "executionTime";
 
   var margin = {
           top: 55,
@@ -27,7 +31,7 @@ makeCharts = function(dataUrl) {
       })
       .y0(height)
       .y1(function(d) {
-          return y(d.executionTime);
+          return y(d[propertyToPlot]);
       });
 
   var line = d3.svg.line()
@@ -35,7 +39,7 @@ makeCharts = function(dataUrl) {
           return x(d.date);
       })
       .y(function(d) {
-          return y(d.executionTime);
+          return y(d[propertyToPlot]);
       });
 
   var xAxis = d3.svg.axis().scale(x)
@@ -48,9 +52,14 @@ makeCharts = function(dataUrl) {
 
   //get the data
   psv(dataUrl, function(error, data) {
+      if (!data) {
+        console.warn("Unable to fetch data, so not preparing the graphs.");
+        return;
+      }
+
       data.forEach(function(d) {
           d.date = parseDate(d.date);
-          d.executionTime = +d.executionTime;
+          d[propertyToPlot] = +d[propertyToPlot];
       });
       // Scale the range of the data
       x.domain(d3.extent(data, function(d) {
@@ -68,8 +77,8 @@ makeCharts = function(dataUrl) {
 
       // Compute the maximum executionTime per chart, needed for the y-domain.
       charts.forEach(function(s) {
-          s.maxexecutionTime = d3.max(s.values, function(d) {
-              return d.executionTime;
+          s.maxVal = d3.max(s.values, function(d) {
+              return d[propertyToPlot];
           });
       });
 
@@ -96,7 +105,7 @@ makeCharts = function(dataUrl) {
       svg.append("path")
           .attr("class", "area")
           .attr("d", function(d) {
-              y.domain([0, d.maxexecutionTime]);
+              y.domain([0, d.maxVal]);
               return area(d.values);
           });
 
@@ -104,7 +113,7 @@ makeCharts = function(dataUrl) {
       svg.append("path")
           .attr("class", "line")
           .attr("d", function(d) {
-              y.domain([0, d.maxexecutionTime]);
+              y.domain([0, d.maxVal]);
               return line(d.values);
           });
 
@@ -135,7 +144,7 @@ makeCharts = function(dataUrl) {
           .attr("dy", "1em")
           .style("text-anchor", "middle")
           .text("Milliseconds");
-
+    
   });
 
 } //end function
