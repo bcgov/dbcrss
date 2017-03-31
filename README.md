@@ -1,13 +1,28 @@
 [![Build Status](https://travis-ci.org/bcgov/dbcrss.svg?branch=master)](https://travis-ci.org/bcgov/dbcrss)
 # dbcrss
 DataBC Application Feeds Service
-## How to Access
-* https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/
-* https://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/
-* https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/
-* https://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/
-* https://bcgov.github.io/dbcrss/heartbeat/router/
-* https://bcgov.github.io/dbcrss/heartbeat/router_latency/
+
+### Visualizations
+
+B.C. Physical Address Geocoder<br/>
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/  <br/><br/>
+
+B.C. Physical Address Geocoder (Gated)<br/>
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
+http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/  <br/><br/>
+
+B.C. Route Planner<br/>
+http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
+http://bcgov.github.io/dbcrss/heartbeat/router_latency/  <br/><br/>
+
+B.C. Geographical Names Web Service<br/>
+http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
+
+Geomark Web Service<br/>
+http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
+
+
 
 ## Update Interval
 every 15 minutes
