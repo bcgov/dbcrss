@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
-2017/05/05|19:30:04||||500|
 2017/05/05|19:40:04||||500|
 2017/05/05|19:50:04||||500|
 2017/05/05|20:00:04||||500|
@@ -1008,3 +1007,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2017/05/12|19:10:05||26|0|200|93.3690071106
 2017/05/12|19:20:05||27|0|200|240.493059158
 2017/05/12|19:30:05||27|0|200|782.423973083
+2017/05/12|19:40:05||27|0|200|117.688179016
