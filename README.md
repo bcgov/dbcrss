@@ -28,7 +28,7 @@ http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 every 15 minutes
 
 ## Purpose
-Health check for DataBC Geocoder and Route Planer API
+Health check for DataBC Geocoder and Route Planner API
 
 ## License
 
