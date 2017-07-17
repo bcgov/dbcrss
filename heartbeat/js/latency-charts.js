@@ -17,6 +17,8 @@ makeCharts = function(dataUrl) {
   var fractionUpperGraph = 0.75;
   var spaceBetweenUpperAndLower = 25; //px
 
+  var timeoutMs = 60000;
+
   var upperHeight = height * fractionUpperGraph;
   var lowerHeight = height * (1-fractionUpperGraph) - spaceBetweenUpperAndLower;
 
@@ -45,7 +47,7 @@ makeCharts = function(dataUrl) {
           return y(d.serverSideResponseTimeMs);
       })
       .defined(function(d) { 
-        return !isNaN(d.serverSideResponseTimeMs);
+        return !isNaN(d.serverSideResponseTimeMs) && d.serverSideResponseTimeMs < timeoutMs;
       })
 
 
@@ -79,10 +81,11 @@ makeCharts = function(dataUrl) {
       .orient("left").ticks(10)
       .innerTickSize(-width);
 
-  // add a Y axis line on the right of the chart with tick marks
-  var yAxisLower = d3.svg.axis().scale(y2)
-      .orient("left").ticks(2)
-      .innerTickSize(-width);
+  var notTimeout = function(d) {
+    if (d.serverSideResponseTimeMs > timeoutMs)
+      return null;
+    return d.serverSideResponseTimeMs;
+  };
 
   //get the data
   psv(dataUrl, function(error, data) {
@@ -105,21 +108,28 @@ makeCharts = function(dataUrl) {
           return d.date;
       }));
 
+      var avgServerSideResponseTimeMs = d3.median(data, notTimeout);
+      var avgLine1 = d3.svg.line()
+          .x(function(d) { return x(d.date); })
+          .y(function(d) { return y(avgServerSideResponseTimeMs); });
+
       // Scale the range of the data on the Y axis (left)
       //y.domain([0, 100]);
-      y.domain([0, d3.max(data, function(d) {
-          return Math.max(d.serverSideResponseTimeMs);
-      })]);
+      var maxYAxisVal = d3.max(data, notTimeout);
+      if (maxYAxisVal > 10*avgServerSideResponseTimeMs)
+        maxYAxisVal = 10*avgServerSideResponseTimeMs;
+      
+      y.domain([0, maxYAxisVal]);
 
       // Scale the range of the data on the Y axis (right)
       y2.domain([0, d3.max(data, function(d) {
           return Math.max(d.serverSideFractionExecutionTime);
       })]);
 
-      var avgServerSideResponseTimeMs = d3.mean(data, function(d) { return d.serverSideResponseTimeMs});
-      var avgLine1 = d3.svg.line()
-          .x(function(d) { return x(d.date); })
-          .y(function(d) { return y(avgServerSideResponseTimeMs); });
+      // add a Y axis line on the right of the chart with tick marks
+      var yAxisLower = d3.svg.axis().scale(y2)
+          .orient("left").tickValues(y2.domain())
+          .innerTickSize(-width);
 
       // Nest data by chart.
       var charts = d3.nest()
@@ -184,7 +194,7 @@ makeCharts = function(dataUrl) {
       svg.append("text")
           .attr("transform", "rotate(-90)")
           .attr("x", 0 - (upperHeight / 2))
-          .attr("y", -60)
+          .attr("y", -70)
           .attr("dy", "1em")
           .style("font-size", "1em")
           .style("text-anchor", "middle")
@@ -192,7 +202,7 @@ makeCharts = function(dataUrl) {
       svg.append("text")
           .attr("transform", "rotate(-90)")
           .attr("x", 0 - (upperHeight / 2))
-          .attr("y", -60)
+          .attr("y", -70)
           .attr("dy", "2em")
           .style("font-size", "1em")
           .style("text-anchor", "middle")

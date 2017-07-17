@@ -9,7 +9,6 @@
       <link rel="stylesheet" type="text/css" href="../lib/bootstrap/3.3.7/css/bootstrap.min.css">
       <script type="text/javascript" src="../lib/d3/3.5.17/d3.min.js"></script>
       <script type="text/javascript" src="../lib/moment/2.18.1/moment.js"></script>
-      <script type="text/javascript" src="../lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="../js/latency-charts.js"></script>
    </head>
    <body>
@@ -25,7 +24,7 @@
             <p><strong><font color="blue">[Server-side processing time]</font></strong> = [gateway latency] + [internal execution time of upstream service] + [network latency between gateway and upstream service]</p>
             <p>where [gateway latency] is the time between the gateway receiving the request from the client and sending it to the upstream service.</p><br/>
 
-            <p>The <font color="blue">dashed line</font> is the one week average [Server-side processing time].</p><br>
+            <p>The <font color="blue">dashed line</font> is the one week median [Server-side processing time].</p><br>
 
             <p>Note: The total response time (not shown on these charts) has the following relationship with [Server-side processing time]:<br/>
              [total response time] = [Server-side processing time] + [network latency to send response back to client]</p>
