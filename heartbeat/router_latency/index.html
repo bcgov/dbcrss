@@ -6,21 +6,48 @@
       <meta name="description" content="router latency heartbeat">
       <meta name="keywords" content="HTML,CSS,JavaScript,D3">
       <link rel="stylesheet" type="text/css" href="../css/main.css">
+      <link rel="stylesheet" type="text/css" href="../lib/bootstrap/3.3.7/css/bootstrap.min.css">
       <script type="text/javascript" src="../lib/d3/3.5.17/d3.min.js"></script>
+      <script type="text/javascript" src="../lib/moment/2.18.1/moment.js"></script>
       <script type="text/javascript" src="../js/latency-charts.js"></script>
    </head>
    <body>
-      <script type="text/javascript">
-        makeCharts("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/data/router-heartbeat.txt");
-      </script>
-      <h2 style="font-size:26px;" align="center">
-         BC Route Planner Heartbeat
-      </h2>
-      <h3 align="center">
-         <font color="blue">Geocoder execution time</font> | <font color="red">Network Latency</font> | <font color="purple">Gateway Latency</font>
-      </h3>
-      <h4 style="font-size:14px;" align="center">
-        <font color="blue"> (<b>Left axis:</b> execution time</font>  |  <font color="red"><b>Right axis:</b> latency)</font>
-      </h4>
+
+      <div class="container">
+
+        <h2 align="center">
+           BC Physical Address Geocoder (Public) Heartbeat
+        </h2>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p><strong><font color="blue">[Server-side processing time]</font></strong> = [gateway latency] + [internal execution time of upstream service] + [network latency between gateway and upstream service]</p>
+            <p>where [gateway latency] is the time between the gateway receiving the request from the client and sending it to the upstream service.</p><br/>
+
+            <p>The <font color="blue">dashed line</font> is the one week median [Server-side processing time].</p><br>
+
+            <p>Note: The total response time (not shown on these charts) has the following relationship with [Server-side processing time]:<br/>
+             [total response time] = [Server-side processing time] + [network latency to send response back to client]</p>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p><strong><font color="red">[Fraction Execution]</font></strong> = [internal execution time of upstream service] / [Server-side processing time]</p>
+          </div>
+        </div>
+
+
+        <div id="chart-container">
+          <script type="text/javascript">
+            makeCharts("https://raw.githubusercontent.com/bcgov/dbcrss/master/heartbeat/data/router-heartbeat.txt");
+          </script>
+        </div>
+
+
+      </div>
+
    </body>
+
 </html>
