@@ -59,7 +59,7 @@ makeCharts = function(dataUrl) {
           return y2(d.serverSideFractionExecutionTime);
       })
       .defined(function(d) { 
-        return !isNaN(d.serverSideFractionExecutionTime) && d.serverSideResponseTimeMs > 0;
+        return !isNaN(d.serverSideFractionExecutionTime) && d.serverSideResponseTimeMs < timeoutMs && d.serverSideResponseTimeMs > 0;
       })
 
   /*
