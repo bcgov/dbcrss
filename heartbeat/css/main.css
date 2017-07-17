@@ -2,10 +2,16 @@ body {
 	font: 14px sans-serif;
 	margin: 2;
 }
-.line {
+.line1 {
 	fill: none;
 	stroke: blue;
 	stroke-width: 3.0px;
+}
+.avg-line1 {
+	fill: none;
+	stroke: blue;
+	stroke-width: 0.5px;
+  stroke-dasharray: 4,2;
 }
 .line2 {
 	fill: none;
