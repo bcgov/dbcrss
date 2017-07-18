@@ -111,7 +111,7 @@ makeCharts = function(dataUrl, propertyToPlot) {
 
       // Add the line path elements.
       svg.append("path")
-          .attr("class", "line")
+          .attr("class", "line1")
           .attr("d", function(d) {
               y.domain([0, d.maxVal]);
               return line(d.values);
