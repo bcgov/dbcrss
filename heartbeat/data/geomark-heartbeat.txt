@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
-2017/07/19|09:20:03||||404|
 2017/07/19|09:30:03||||404|
 2017/07/19|09:40:03||||404|
 2017/07/19|09:50:03||||404|
@@ -1008,3 +1007,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2017/07/26|09:10:03||||200|282.599925995
 2017/07/26|09:20:03||||200|298.639059067
 2017/07/26|09:30:03||||200|394.917011261
+2017/07/26|09:40:03||||200|308.431863785
