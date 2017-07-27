@@ -46,6 +46,8 @@
 
  python heartbeat.py -url "https://apps.gov.bc.ca/pub/geomark/geomarks/gm-7A4A2A93A090493186442C1A48B179C4/point.json?srid=4326" -o ../data/geomark-heartbeat.txt
 
+ python heartbeat.py -url "https://catalogue.data.gov.bc.ca/api/3/action/package_search?fq=license_id:22" -o ../data/bcdc-heartbeat.txt
+
  Contact Us
  -----------
  https://forms.gov.bc.ca/databc-contact-us/
