@@ -1,3 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2017/07/27|14:40:03||||200|115.443944931
 2017/07/27|14:50:03||||200|125.299930573
+2017/07/27|15:00:04||||200|96.3311195374
