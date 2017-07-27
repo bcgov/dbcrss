@@ -22,6 +22,8 @@ http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
 Geomark Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 
+BC Data Catalog (BCDC)<br/>
+http://bcgov.github.io/dbcrss/heartbeat/bcdc  <br/><br>
 
 
 ## Update Interval
