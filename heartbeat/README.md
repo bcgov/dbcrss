@@ -27,6 +27,9 @@ http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
 Geomark Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 
+BC Data Catalogue API<br/>
+http://bcgov.github.io/dbcrss/heartbeat/bcdc/  <br/><br>
+
 
 ### Supported web browsers
 
