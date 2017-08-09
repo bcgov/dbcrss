@@ -1,6 +1,16 @@
 language: python
 python:
   - "2.7"
-# command to run tests
-install: "pip install argparse"
-script: python heartbeat/src/Heartbeat.py -url="https://geocoder.api.gov.bc.ca/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=$dk -o geocoder-secure-heartbeat.txt
+  - "3.4"
+  - "3.5"
+  - "3.5-dev"
+  - "3.6"
+  - "3.6-dev"
+  - "3.7-dev"
+  - "nightly"
+install:
+  - pip install pytest-cov coveralls
+script:
+  - pytest --cov=heartbeat tests
+after_success:
+  - coveralls
