@@ -9,11 +9,14 @@ import time
 if sys.version_info > (3,):
     from io import StringIO
     from urllib.error import HTTPError, URLError
+
+    import unittest.mock as mock
 else:
     from StringIO import StringIO
     from urllib2 import HTTPError, URLError
 
-import mock
+    import mock
+
 import pytest
 
 from heartbeat import heartbeat
@@ -210,8 +213,7 @@ class TestGetUrlResponseInfo:
             mock.call(),
             mock.call()
         ))
-        print(mock_urlopen.call_args_list)
-        # mock_urlopen.assert_called_once_with(TEST_URL)
+        mock_urlopen.assert_called_once_with(TEST_URL)
         (mock_urlopen.
          return_value.
          info.
