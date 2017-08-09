@@ -1,15 +1,15 @@
-# Last Modified: August 9, 2017
-
 """
---------------------------------------------------------------------------------
+ Last Modified: August 9, 2017
+
+------------------------------------------------------------------------------
  Description
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
  This python script is used to submit a single request to a web service
  or collection of web services. This script will capture and parse the
- web service response (and header) and write an entry to a text file. Intended to be
- included in a scheduled job with a regular interval to monitor a
- web service.
+ web service response (and header) and write an entry to a text file.
+ Intended to be included in a scheduled job with a regular interval to
+ monitor a web service.
 
  The script will log the date, time, executionTime, latency
  and response code for the BC Physical Address Geocoder and the
@@ -27,15 +27,14 @@
  Two of these APIs require the use of API keys. To acquire an API
  key for your application please contact DataBC.
 
-
+------------------------------------------------------------------------------
  Usage
- -----
-
+------------------------------------------------------------------------------
  python heartbeat.py -url "<URL TO TEST>" -o <OUTPUT FILE>
 
+------------------------------------------------------------------------------
  Usage Examples
- --------------
-
+------------------------------------------------------------------------------
  python heartbeat.py -url "https://geocoder.api.gov.bc.ca/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=<KEY_HERE>" -o ../data/geocoder-secure-heartbeat.txt
 
  python heartbeat.py -url "https://apps.gov.bc.ca/pub/geocoder/addresses.json?addressString=%20525%20Superior%20Street%2C%20Victoria%2C%20BC&locationDescriptor=any&maxResults=1&interpolation=adaptive&echo=true&setBack=0&outputSRS=4326&minScore=1&provinceCode=BC&apikey=nokeyprovided" -o ../data/geocoder-public-heartbeat.txt
@@ -48,9 +47,9 @@
 
  python heartbeat.py -url "https://catalogue.data.gov.bc.ca/api/3/action/package_search?fq=license_id:22" -o ../data/bcdc-heartbeat.txt
 
+------------------------------------------------------------------------------
  Contact Us
- -----------
-
+------------------------------------------------------------------------------
  https://forms.gov.bc.ca/databc-contact-us/
 """
 
