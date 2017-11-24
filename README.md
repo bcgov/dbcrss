@@ -25,6 +25,8 @@ http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 BC Data Catalog (BCDC)<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcdc  <br/><br>
 
+HectaresBC<br/>
+http://bcgov.github.io/dbcrss/heartbeat/habc/ <br/><br>
 
 ## Update Interval
 every 15 minutes
