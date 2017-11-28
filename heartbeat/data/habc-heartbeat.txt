@@ -584,3 +584,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2017/11/28|14:50:05|||||
 2017/11/28|15:00:05|||||
 2017/11/28|15:10:05||||200|343.26910972595215
+2017/11/28|15:20:05||||200|327.36992835998535
