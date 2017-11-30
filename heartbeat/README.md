@@ -30,6 +30,9 @@ http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 BC Data Catalogue API<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcdc/  <br/><br>
 
+HectaresBC
+http://bcgov.github.io/dbcrss/heartbeat/habc/  <br/><br>
+
 
 ### Supported web browsers
 
