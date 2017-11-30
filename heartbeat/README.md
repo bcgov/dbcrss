@@ -30,7 +30,7 @@ http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 BC Data Catalogue API<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcdc/  <br/><br>
 
-HectaresBC
+HectaresBC<br/>
 http://bcgov.github.io/dbcrss/heartbeat/habc/  <br/><br>
 
 
