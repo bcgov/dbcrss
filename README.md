@@ -29,7 +29,7 @@ HectaresBC<br/>
 http://bcgov.github.io/dbcrss/heartbeat/habc/ <br/><br>
 
 ## Update Interval
-every 15 minutes
+every 10 minutes
 
 ## Purpose
 Health check for DataBC Geocoder and Route Planner API
