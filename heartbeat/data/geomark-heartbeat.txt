@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
-2017/12/19|20:40:05||||200|158.99085998535156
 2017/12/19|20:50:04||||200|168.79582405090332
 2017/12/19|21:00:04||||200|103.76119613647461
 2017/12/19|21:10:04||||200|173.79498481750488
@@ -1007,3 +1006,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2017/12/26|20:26:26||||503|
 2017/12/26|20:36:33||||503|
 2017/12/26|20:46:26||||503|
+2017/12/26|20:56:36||||503|
