@@ -4,6 +4,7 @@ DataBC Application Feeds Service
 
 ### Visualizations
 
+#### Geocoder
 B.C. Physical Address Geocoder<br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/  <br/><br/>
@@ -12,19 +13,24 @@ B.C. Physical Address Geocoder (Gated)<br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/  <br/><br/>
 
+#### Router
 B.C. Route Planner<br/>
 http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
 http://bcgov.github.io/dbcrss/heartbeat/router_latency/  <br/><br/>
 
+#### BCGNWS
 B.C. Geographical Names Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
 
+#### GEOMARK
 Geomark Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
 
+#### BCDC
 BC Data Catalog (BCDC)<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcdc  <br/><br>
 
+#### HectaresBC
 HectaresBC<br/>
 http://bcgov.github.io/dbcrss/heartbeat/habc/ <br/><br>
 
