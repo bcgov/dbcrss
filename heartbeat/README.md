@@ -13,7 +13,7 @@ B.C. Geographical Names Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
 
 DataBC Web Services<br/>
-
+https://bcgov.github.io/dbcrss/<br/><br/>
 
 ### Supported web browsers
 
