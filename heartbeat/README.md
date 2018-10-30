@@ -9,29 +9,10 @@ A single request is sent to each web service using a scheduled job to ensure con
 
 ### Visualizations
 
-B.C. Physical Address Geocoder<br/>
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub/  <br/>
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_pub_latency/  <br/><br/>
-
-B.C. Physical Address Geocoder (Gated)<br/>
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec/  <br/>
-http://bcgov.github.io/dbcrss/heartbeat/geocoder_sec_latency/  <br/><br/>
-
-B.C. Route Planner<br/>
-http://bcgov.github.io/dbcrss/heartbeat/router/  <br/>
-http://bcgov.github.io/dbcrss/heartbeat/router_latency/  <br/><br/>
-
 B.C. Geographical Names Web Service<br/>
 http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
 
-Geomark Web Service<br/>
-http://bcgov.github.io/dbcrss/heartbeat/geomark/  <br/><br>
-
-BC Data Catalogue API<br/>
-http://bcgov.github.io/dbcrss/heartbeat/bcdc/  <br/><br>
-
-HectaresBC<br/>
-http://bcgov.github.io/dbcrss/heartbeat/habc/  <br/><br>
+DataBC Web Services<br/>
 
 
 ### Supported web browsers
