@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
-2018/12/09|08:30:08|||||
 2018/12/09|08:40:08|||||
 2018/12/09|08:50:07|||||
 2018/12/09|09:00:08|||||
@@ -1007,3 +1006,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2018/12/16|08:00:08|||||
 2018/12/16|08:10:08|||||
 2018/12/16|08:20:08|||||
+2018/12/16|08:30:08|||||
