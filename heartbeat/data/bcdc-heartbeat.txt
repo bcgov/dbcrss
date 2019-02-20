@@ -1,5 +1,4 @@
 chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
-2019/02/13|03:50:07|||||
 2019/02/13|04:00:07|||||
 2019/02/13|04:10:07|||||
 2019/02/13|04:20:07|||||
@@ -1007,3 +1006,4 @@ chart|date|executionTime|upstreamLatency|proxyLatency|responseCode|responseTime
 2019/02/20|03:20:08|||||
 2019/02/20|03:30:08|||||
 2019/02/20|03:40:08|||||
+2019/02/20|03:50:08|||||
