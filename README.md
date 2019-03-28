@@ -4,17 +4,11 @@ DataBC Application Feeds Service
 
 ### Visualizations
 
-#### BCGNWS
-B.C. Geographical Names Web Service<br/>
-http://bcgov.github.io/dbcrss/heartbeat/bcgnws/  <br/><br/>
-
 #### DataBC Web Services
-https://bcgov.github.io/dbcrss/<br/><br>
-
-
+https://uptime.apps.gov.bc.ca <br/><br>
 
 ## Purpose
-Health check for DataBC Geocoder and Route Planner API
+Service Status Page
 
 ## License
 
