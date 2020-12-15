@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/bcgov/dbcrss.svg?branch=master)](https://travis-ci.org/bcgov/dbcrss)
+
+![img](https://img.shields.io/badge/Lifecycle-Stable-97ca00)
+
 # dbcrss
 DataBC Application Feeds Service
 
